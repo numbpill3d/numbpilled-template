@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9400D3;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #9400D3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    z-index: 9999;
+}
+
+#wrapper {
+    display: none; /* Hidden until loading screen is gone */
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid #9400D3;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Sidebars */
+#left-sidebar, #right-sidebar {
+    position: fixed;
+    top: 60px;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #9400D3;
+    padding: 15px;
+    box-shadow: 0 0 10px #9400D3;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+}
+
+#left-sidebar {
+    left: 0;
+}
+
+#right-sidebar {
+    right: 0;
+}
+
+/* Floating Content Containers */
+.floating-container {
+    position: absolute;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #9400D3;
+    padding: 10px;
+    box-shadow: 0 0 15px #9400D3;
+}
+
+/* Main Content Area */
+#main-content {
+    margin: 100px 220px 50px 220px;
+    padding: 20px;
+    border: 1px solid #9400D3;
+    box-shadow: 0 0 10px #9400D3;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.glow-text {
+    font-size: 48px;
+    text-align: center;
+    color: #9400D3;
+    text-shadow: 0 0 10px #9400D3, 0 0 20px #9400D3, 0 0 30px #9400D3;
+}
+
+/* Tabs */
+.tabs {
+    margin-top: 30px;
+}
+
+.tab-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.tab-links li {
+    margin-right: 5px;
+}
+
+.tab-links li a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    border: 1px solid #9400D3;
+    box-shadow: 0 0 5px #9400D3;
+    transition: background-color 0.3s;
+}
+
+.tab-links li.active a, .tab-links li a:hover {
+    background-color: #9400D3;
+}
+
+.tab-content .tab {
+    display: none;
+    border: 1px solid #9400D3;
+    padding: 15px;
+    box-shadow: 0 0 10px #9400D3;
+    margin-top: -1px;
+}
+
+.tab-content .active {
+    display: block;
+}
+
+/* Gallery */
+#gallery {
+    margin-top: 30px;
+    display: flex;
+}
+
+#gallery img {
+    width: 200px;
+    height: 150px;
+    margin-right: 10px;
+    border: 1px solid #9400D3;
+    box-shadow: 0 0 10px #9400D3;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #9400D3;
+}
+
+/* Directory of Links */
+#directory {
+    margin-top: 30px;
+}
+
+#directory ul {
+    list-style: none;
+    padding: 0;
+}
+
+#directory ul li {
+    margin-bottom: 10px;
+}
+
+#directory ul li a {
+    font-weight: bold;
+}
+
+#directory ul li ul {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#directory ul li ul li a {
+    font-weight: normal;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #9400D3;
+    box-shadow: 0 -5px 10px #9400D3;
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.5deg);
+    }
+    5% {
+        clip: rect(12px, 9999px, 67px, 0);
+        transform: skew(0.5deg);
+    }
+    10% {
+        clip: rect(85px, 9999px, 6px, 0);
+        transform: skew(0.5deg);
+    }
+    15% {
+        clip: rect(50px, 9999px, 100px, 0);
+        transform: skew(0.5deg);
+    }
+    20% {
+        clip: rect(72px, 9999px, 50px, 0);
+        transform: skew(0.5deg);
+    }
+    25% {
+        clip: rect(30px, 9999px, 100px, 0);
+        transform: skew(0.5deg);
+    }
+    30% {
+        clip: rect(60px, 9999px, 30px, 0);
+        transform: skew(0.5deg);
+    }
+    35% {
+        clip: rect(90px, 9999px, 70px, 0);
+        transform: skew(0.5deg);
+    }
+    40% {
+        clip: rect(10px, 9999px, 40px, 0);
+        transform: skew(0.5deg);
+    }
+    45% {
+        clip: rect(80px, 9999px, 20px, 0);
+        transform: skew(0.5deg);
+    }
+    50% {
+        clip: rect(70px, 9999px, 90px, 0);
+        transform: skew(0.5deg);
+    }
+    55% {
+        clip: rect(40px, 9999px, 60px, 0);
+        transform: skew(0.5deg);
+    }
+    60% {
+        clip: rect(20px, 9999px, 80px, 0);
+        transform: skew(0.5deg);
+    }
+    65% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: skew(0.5deg);
+    }
+    70% {
+        clip: rect(30px, 9999px, 50px, 0);
+        transform: skew(0.5deg);
+    }
+    75% {
+        clip: rect(60px, 9999px, 40px, 0);
+        transform: skew(0.5deg);
+    }
+    80% {
+        clip: rect(20px, 9999px, 80px, 0);
+        transform: skew(0.5deg);
+    }
+    85% {
+        clip: rect(70px, 9999px, 30px, 0);
+        transform: skew(0.5deg);
+    }
+    90% {
+        clip: rect(40px, 9999px, 90px, 0);
+        transform: skew(0.5deg);
+    }
+    95% {
+        clip: rect(80px, 9999px, 60px, 0);
+        transform: skew(0.5deg);
+    }
+    100% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: skew(0.5deg);
+    }
+}
+
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+}
+
+.glitch::before {
+    animation: glitch 2s infinite linear alternate-reverse;
+    color: #f0f;
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch 3s infinite linear alternate-reverse;
+    color: #0ff;
+    z-index: -2;
+}
+
+/* Hover Effects */
+#main-content h1:hover {
+    text-shadow: 0 0 20px #9400D3, 0 0 30px #9400D3, 0 0 40px #9400D3;
+}
+
+/* Three.js Canvas */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
